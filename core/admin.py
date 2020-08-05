@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import JIFB
 
-# Register your models here.
+
+@admin.register(JIFB)
+class JIFBAdmin(admin.ModelAdmin):
+    pass

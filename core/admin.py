@@ -4,4 +4,4 @@ from .models import JIFB
 
 @admin.register(JIFB)
 class JIFBAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['title', 'year', 'edition', 'date_init', 'date_end']

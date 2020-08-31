@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import JIFB, Phone, Dept
+from .models import JIFB, Phone, Dept, Sex
 
 
 @admin.register(JIFB)
@@ -15,3 +15,9 @@ class PhoneAdmin(admin.ModelAdmin):
 @admin.register(Dept)
 class DeptAdmin(admin.ModelAdmin):
     pass
+
+
+@admin.register(Sex)
+class SexAdmin(admin.ModelAdmin):
+    pass
+

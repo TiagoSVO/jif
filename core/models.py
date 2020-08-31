@@ -14,3 +14,13 @@ class JIFB(models.Model):
         return f'{self.title} - {self.year}/{self.edition}'
 
 
+class Phone(models.Model):
+    prefix = models.CharField(max_length=3)
+    number = models.CharField(max_length=9)
+
+    def __str__(self):
+        return f'{self.number_formatted()}'
+
+    def number_formatted(self):
+        number = f'{self.number[0]}.{self.number[1:5]}-{self.number[5:]}' if len(self.number) > 8 else f'{self.number[0:4]}-{self.number[4:]}'
+        return f'({self.prefix}) {number}'

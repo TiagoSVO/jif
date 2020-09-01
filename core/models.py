@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import datetime
 
 
 class JIFB(models.Model):
@@ -8,8 +7,8 @@ class JIFB(models.Model):
     description = models.TextField(verbose_name="Descrição", blank=True, null=True)
     year = models.IntegerField(verbose_name="Ano")
     edition = models.CharField(max_length=30, verbose_name="Edição")
-    date_init = models.DateTimeField(default=datetime.now(), verbose_name="Início")
-    date_end = models.DateTimeField(default=datetime.now(), verbose_name="Fim")
+    date_init = models.DateTimeField(auto_now_add=True, verbose_name="Início")
+    date_end = models.DateTimeField(auto_now_add=True, verbose_name="Fim")
 
     class Meta:
         verbose_name = 'JIFB'
@@ -46,6 +45,18 @@ class Dept(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+
+
+class DeptsPhone(models.Model):
+    dept = models.ForeignKey(Dept, on_delete=models.CASCADE)
+    phone = models.ForeignKey(Phone, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Telefone do Campus'
+        verbose_name_plural = 'Telefones dos Campi'
+
+    def __str__(self):
+        return f'{self.dept.title} - {self.phone.number_formatted()}'
 
 
 class Sex(models.Model):

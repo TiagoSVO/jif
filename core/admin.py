@@ -1,10 +1,15 @@
 from django.contrib import admin
-from .models import JIFB, Phone, Dept, DeptsPhone, Sex
+from .models import JIF, JIFsEvent, Dept, DeptsPhone, Sex
 
 
-@admin.register(JIFB)
-class JIFBAdmin(admin.ModelAdmin):
+@admin.register(JIF)
+class JIFAdmin(admin.ModelAdmin):
     list_display = ['title', 'year', 'edition', 'date_init', 'date_end']
+
+
+@admin.register(JIFsEvent)
+class JIFsEventAdmin(admin.ModelAdmin):
+    pass
 
 
 @admin.register(Dept)

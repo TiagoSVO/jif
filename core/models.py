@@ -37,6 +37,19 @@ class JIFsEvent(models.Model):
         return f'{self.title} | {self.jif.title}'
 
 
+class Committee(models.Model):
+    jif = models.ForeignKey(JIF, on_delete=models.CASCADE, verbose_name="JIF")
+    title = models.CharField(max_length=100, verbose_name="Nome da Comissão")
+    description = models.TextField(verbose_name="Descrição")
+
+    class Meta:
+        verbose_name = 'Comissão'
+        verbose_name_plural = 'Comissões'
+
+    def __str__(self):
+        return f'{self.title} | {self.jif.title} | {self.jif.year} | {self.jif.edition}'
+
+
 class Phone(models.Model):
     prefix = models.CharField(max_length=3, verbose_name='Prefixo', default='XX')
     number = models.CharField(max_length=9, verbose_name='Número', default='XXXXXXXXX')
@@ -89,4 +102,7 @@ class Sex(models.Model):
 
     def __str__(self):
         return f'{self.title}'
+
+
+
 

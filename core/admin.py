@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import JIF, JIFsEvent, Dept, DeptsPhone, Sex
+from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex
 
 
 @admin.register(JIF)
@@ -9,6 +9,11 @@ class JIFAdmin(admin.ModelAdmin):
 
 @admin.register(JIFsEvent)
 class JIFsEventAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Committee)
+class CommitteeAdmin(admin.ModelAdmin):
     pass
 
 

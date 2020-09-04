@@ -3,6 +3,7 @@ import socket
 
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.auth import get_user_model
 from django.core import validators
 from django.core.mail import send_mail
 
@@ -12,6 +13,7 @@ from core.models import Sex, Dept
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    username = None
     siape = models.CharField(max_length=7, verbose_name="Siape", unique=True,
                              help_text='Requer 7 digitos numéricos.',
                              validators=[

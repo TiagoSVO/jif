@@ -3,6 +3,7 @@ from django.utils import timezone
 
 
 class UserManager(BaseUserManager):
+    use_in_migration = True
 
     def _create_user(self, siape, email, password, is_staff, is_superuser, **extra_fields):
         now = timezone.now()

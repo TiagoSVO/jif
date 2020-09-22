@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType
-from .models import Championship, Game, Group
+from .models import Championship, Game, Group, ModalityType, Modality
 
 
 @admin.register(JIF)
@@ -35,6 +35,16 @@ class SexAdmin(admin.ModelAdmin):
 
 @admin.register(BloodType)
 class BloodTypeAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(ModalityType)
+class ModalityTypeAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Modality)
+class ModalityAdmin(admin.ModelAdmin):
     pass
 
 

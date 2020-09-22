@@ -115,6 +115,34 @@ class BloodType(models.Model):
         return f'{self.title}'
 
 
+class ModalityType(models.Model):
+    title = models.CharField(max_length=100, verbose_name='Título')
+    acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
+    description = models.TextField(verbose_name="Descrição")
+
+    class Meta:
+        verbose_name = 'Tipo de Modalidade'
+        verbose_name_plural = 'Tipos de Modalidades'
+
+    def __str__(self):
+        return f'{self.title}'
+
+
+class Modality(models.Model):
+    modality_type = models.ForeignKey(ModalityType, on_delete=models.SET_NULL, blank=True, null=True)
+    title = models.CharField(max_length=100, verbose_name='Título')
+    acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
+    description = models.TextField(verbose_name="Descrição")
+    sex = models.ForeignKey(Sex,  on_delete=models.SET_NULL, blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Modalidade'
+        verbose_name_plural = 'Modalidades'
+
+    def __str__(self):
+        return f'{self.modality_type.title} | {self.title}'
+
+
 class Championship(models.Model):
     #TODO: Modificar de jif para jif_modality
     jif = models.ForeignKey(JIF, on_delete=models.CASCADE, verbose_name="JIF")

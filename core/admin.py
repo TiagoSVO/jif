@@ -1,11 +1,20 @@
 from django.contrib import admin
+from .forms import JIFForm
 from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType
-from .models import Championship, Game, Group, ModalityType, Modality
+from .models import Championship, Game, Group, ModalityType, Modality, JIFModality
+
+
+class JIFModalityInline(admin.StackedInline):
+    model = JIF.modalities.through
+    extra = 0
 
 
 @admin.register(JIF)
 class JIFAdmin(admin.ModelAdmin):
+    form = JIFForm
     list_display = ['title', 'year', 'edition', 'date_init', 'date_end']
+
+    #inlines = [JIFModalityInline, ]
 
 
 @admin.register(JIFsEvent)

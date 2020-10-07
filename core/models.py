@@ -12,6 +12,7 @@ class JIF(models.Model):
     date_init = models.DateTimeField(default=datetime.now, verbose_name="Início")
     date_end = models.DateTimeField(default=datetime.now, verbose_name="Fim")
     image = models.ImageField(upload_to='products', blank=True, null=True)
+    modalities = models.ManyToManyField('Modality', through='JIFModality', related_name='jif')
 
     class Meta:
         verbose_name = 'JIF'
@@ -141,6 +142,18 @@ class Modality(models.Model):
 
     def __str__(self):
         return f'{self.modality_type.title} | {self.title}'
+
+
+class JIFModality(models.Model):
+    jif = models.ForeignKey(JIF, on_delete=models.CASCADE)
+    modality = models.ForeignKey(Modality, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Modalidade do JIF'
+        verbose_name_plural = 'Modalidades dos JIFS'
+
+    def __str__(self):
+        return f'{self.jif.title} | {self.modality.title}'
 
 
 class Championship(models.Model):

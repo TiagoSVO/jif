@@ -3,6 +3,7 @@ from .forms import JIFForm
 from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType
 from .models import Championship, Game, Group, ModalityType, Modality, Restriction
 from .models import JIFModality, JIFModalityRestriction, JIFModalityRestrictionValue
+from nested_admin import NestedModelAdmin, NestedStackedInline
 
 
 class JIFModalityInline(admin.StackedInline):
@@ -10,18 +11,18 @@ class JIFModalityInline(admin.StackedInline):
     extra = 0
 
 
-class JIFModalityRestrictionValueInline(admin.StackedInline):
+class JIFModalityRestrictionValueInline(NestedStackedInline):
     model = JIFModalityRestrictionValue
     extra = 0
 
 
-class JIFModalityRestrictionInline(admin.StackedInline):
+class JIFModalityRestrictionInline(NestedStackedInline):
     model = JIFModalityRestriction
     extra = 0
 
     # TODO: Verificar ou desenvolver a possibilidade de colocar em stackedinline para colocar os valores
     # da para as restrições no mesmo formulário de restrições de modalidade
-    # inlines = [JIFModalityRestrictionValue, ]
+    inlines = [JIFModalityRestrictionValueInline, ]
 
 
 @admin.register(JIF)
@@ -71,7 +72,7 @@ class ModalityAdmin(admin.ModelAdmin):
 
 
 @admin.register(JIFModality)
-class JIFModalityAdmin(admin.ModelAdmin):
+class JIFModalityAdmin(NestedModelAdmin):
     inlines = [JIFModalityRestrictionInline, ]
 
 

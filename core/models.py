@@ -179,7 +179,7 @@ class JIFModalityRestriction(models.Model):
         verbose_name_plural = 'Restrições de Modalidades dos JIFS'
 
     def __str__(self):
-        return f'{self.jif.title} | {self.modality.title}'
+        return f'{self.jif_modality.jif.title} | {self.jif_modality.modality.title}'
 
 
 class JIFModalityRestrictionValue(models.Model):
@@ -192,7 +192,7 @@ class JIFModalityRestrictionValue(models.Model):
         verbose_name_plural = 'Modalidades dos JIFS'
 
     def __str__(self):
-        return f'{self.jif.title} | {self.modality.title}'
+        return f'{self.jif_modality_restriction.restriction.title} | {self.value}'
 
 
 class Championship(models.Model):

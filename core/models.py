@@ -188,8 +188,8 @@ class JIFModalityRestrictionValue(models.Model):
                              help_text='Campo opicional para atribuir algum valor', blank=True, null=True)
 
     class Meta:
-        verbose_name = 'Modalidade do JIF'
-        verbose_name_plural = 'Modalidades dos JIFS'
+        verbose_name = 'Valor de Restrição para modalidade'
+        verbose_name_plural = 'Valores de Restrições para modalidades'
 
     def __str__(self):
         return f'{self.jif_modality_restriction.restriction.title} | {self.value}'

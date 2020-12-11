@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.contrib.admin.forms import AdminPasswordChangeForm
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import User
+from .models import User, JIFProfile
 from .forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.models import Group
 
 
 @admin.register(User)
@@ -10,7 +11,7 @@ class CustomUserAdmin(BaseUserAdmin):
     add_form = UserCreationForm
     form = UserChangeForm
 
-    exclude = ['last_login']
+    exclude = ['last_login', 'groups']
 
     fieldsets = (
         (None, {'fields': ('siape', 'password')}),
@@ -21,7 +22,6 @@ class CustomUserAdmin(BaseUserAdmin):
                                'last_sign_in_at',
                                'current_sign_in_ip',
                                'current_sign_in_at')}),
-        ('Grupoes', {'fields': ('groups',)}),
         ('Permissões', {'fields': ('user_permissions',)}),
     )
 
@@ -34,7 +34,6 @@ class CustomUserAdmin(BaseUserAdmin):
                                'last_sign_in_at',
                                'current_sign_in_ip',
                                'current_sign_in_at')}),
-        ('Grupoes', {'fields': ('groups',)}),
         ('Permissões', {'fields': ('user_permissions',)}),
     )
 
@@ -56,3 +55,9 @@ class CustomUserAdmin(BaseUserAdmin):
         return qs
 
 
+@admin.register(JIFProfile)
+class JIFProfileAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.unregister(Group)

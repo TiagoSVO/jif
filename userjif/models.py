@@ -2,7 +2,7 @@ import re
 import socket
 
 from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, Group
 from django.contrib.auth import get_user_model
 from django.core import validators
 from django.core.mail import send_mail
@@ -12,12 +12,23 @@ from .managers import UserManager
 from core.models import Sex, Dept
 
 
+class JIFProfile(Group):
+    description = models.TextField(verbose_name="Descrição do perfil", blank=True, null=True)
+
+    class Meta:
+        verbose_name = 'Perfil'
+        verbose_name_plural = 'Perfis'
+
+    def __str__(self):
+        return f'{self.name}'
+
+
 class User(AbstractBaseUser, PermissionsMixin):
     readonly_fields = [
         'date_joined',
     ]
-
     username = None
+
     siape = models.CharField(max_length=7, verbose_name="Siape", unique=True,
                              help_text='Requer 7 digitos numéricos.',
                              validators=[
@@ -58,6 +69,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     sex = models.ForeignKey(Sex, verbose_name="Sexo", blank=True, null=True, on_delete=models.SET_NULL)
     dept = models.ForeignKey(Dept, verbose_name="Campus", blank=True, null=True, on_delete=models.SET_NULL)
     date_joined = models.DateTimeField(auto_now_add=True, verbose_name='Ingresso em')
+    profiles = models.ManyToManyField(
+        JIFProfile,
+        verbose_name="Perfis",
+        blank=True,
+        help_text="O perfil é um conjunto de permissões que o usuário pode estar associado",
+        related_name="jifuser_set",
+        through='JIFUserProfile',
+        related_query_name="jifuser",
+    )
 
     USERNAME_FIELD = 'siape'
     REQUIRED_FIELDS = ['email', 'first_name', 'last_name', 'cpf']
@@ -97,7 +117,6 @@ class User(AbstractBaseUser, PermissionsMixin):
             disabled_fields |= {
                 'is_staff',
                 'is_superuser',
-                'groups',
                 'user_permissions',
             }
 
@@ -116,3 +135,17 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def email_user(self, subject, message, from_email=None):
         send_mail(subject, message, from_email, [self.email])
+
+
+class JIFUserProfile(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    modality = models.ForeignKey(JIFProfile, on_delete=models.CASCADE)
+    dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Perfil de Usuário'
+        verbose_name_plural = 'Perfis de Usuários'
+
+    def __str__(self):
+        jif_label = self.jif.acronym or self.jif.title
+        return f'{jif_label} | {self.modality.modality_type.title} - {self.modality.title}'

@@ -13,6 +13,10 @@ from core.models import Sex, Dept
 
 
 class User(AbstractBaseUser, PermissionsMixin):
+    readonly_fields = [
+        'date_joined',
+    ]
+
     username = None
     siape = models.CharField(max_length=7, verbose_name="Siape", unique=True,
                              help_text='Requer 7 digitos numéricos.',
@@ -72,6 +76,36 @@ class User(AbstractBaseUser, PermissionsMixin):
         hostname = socket.gethostname()
         ip_address = socket.gethostbyname(hostname)
         return f'{ip_address} - {hostname}'
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        is_superuser = request.user.is_superuser
+        disabled_fields = set()  # type: Set[str]
+
+        if not is_superuser:
+            disabled_fields |= {
+                'siape',
+                'is_superuser',
+                'user_permissions',
+            }
+
+        if (
+                not is_superuser
+                and obj is not None
+                and obj == request.user
+        ):
+            disabled_fields |= {
+                'is_staff',
+                'is_superuser',
+                'groups',
+                'user_permissions',
+            }
+
+        for f in disabled_fields:
+            if f in form.base_fields:
+                form.base_fields[f].disabled = True
+
+        return form
 
     def get_full_name(self):
         full_name = f'{self.first_name} {self.last_name}'

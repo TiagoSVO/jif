@@ -69,14 +69,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     sex = models.ForeignKey(Sex, verbose_name="Sexo", blank=True, null=True, on_delete=models.SET_NULL)
     dept = models.ForeignKey(Dept, verbose_name="Campus", blank=True, null=True, on_delete=models.SET_NULL)
     date_joined = models.DateTimeField(auto_now_add=True, verbose_name='Ingresso em')
-    profiles = models.ManyToManyField(
+    jif_profiles = models.ManyToManyField(
         JIFProfile,
         verbose_name="Perfis",
         blank=True,
         help_text="O perfil é um conjunto de permissões que o usuário pode estar associado",
-        related_name="jifuser_set",
+        related_name="user",
         through='JIFUserProfile',
-        related_query_name="jifuser",
     )
 
     USERNAME_FIELD = 'siape'
@@ -139,7 +138,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 class JIFUserProfile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    modality = models.ForeignKey(JIFProfile, on_delete=models.CASCADE)
+    profile = models.ForeignKey(JIFProfile, on_delete=models.CASCADE)
     dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, null=True, blank=True)
 
     class Meta:

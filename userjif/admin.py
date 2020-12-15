@@ -6,6 +6,11 @@ from .forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import Group
 
 
+class JIFUserProfile(admin.StackedInline):
+    model = User.jif_profiles.through
+    extra = 0
+
+
 @admin.register(User)
 class CustomUserAdmin(BaseUserAdmin):
     add_form = UserCreationForm
@@ -43,6 +48,8 @@ class CustomUserAdmin(BaseUserAdmin):
         'current_sign_in_ip',
         'current_sign_in_at',
     ]
+
+    inlines = [JIFUserProfile, ]
 
     search_fields = ('siape',)
     ordering = ('siape',)

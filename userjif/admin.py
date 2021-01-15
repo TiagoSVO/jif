@@ -1,18 +1,26 @@
 from django.contrib import admin
 from django.contrib.admin.forms import AdminPasswordChangeForm
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import User, JIFProfile
+from .models import User, JIFProfile, JIFUserProfile
 from .forms import UserCreationForm, UserChangeForm
 from django.contrib.auth.models import Group
+from nested_admin import NestedModelAdmin, NestedStackedInline
 
 
-class JIFUserProfile(admin.StackedInline):
-    model = User.jif_profiles.through
+class FunctionTypeCommitteeUserProfileStacked(NestedStackedInline):
+    model = JIFUserProfile.function_committees.through
     extra = 0
 
 
+class JIFUserProfileStacked(NestedStackedInline):
+    model = User.jif_profiles.through
+    extra = 0
+
+    inlines = [FunctionTypeCommitteeUserProfileStacked, ]
+
+
 @admin.register(User)
-class CustomUserAdmin(BaseUserAdmin):
+class CustomUserAdmin(BaseUserAdmin, NestedModelAdmin):
     add_form = UserCreationForm
     form = UserChangeForm
 
@@ -49,7 +57,7 @@ class CustomUserAdmin(BaseUserAdmin):
         'current_sign_in_at',
     ]
 
-    inlines = [JIFUserProfile, ]
+    inlines = [JIFUserProfileStacked, ]
 
     search_fields = ('siape',)
     ordering = ('siape',)

@@ -9,7 +9,7 @@ from django.core.mail import send_mail
 
 from .managers import UserManager
 
-from core.models import Sex, Dept
+from core.models import Sex, Dept, Committee, FunctionTypeCommittee
 
 
 class JIFProfile(Group):
@@ -137,9 +137,17 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
 class JIFUserProfile(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    profile = models.ForeignKey(JIFProfile, on_delete=models.CASCADE)
-    dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, null=True, blank=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Usuário")
+    profile = models.ForeignKey(JIFProfile, on_delete=models.CASCADE, verbose_name="Perfil")
+    dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, null=True, blank=True, verbose_name="Campus")
+    function_committees = models.ManyToManyField(
+        FunctionTypeCommittee,
+        verbose_name="Função da Comissão",
+        blank=True,
+        help_text="Este campo serve para informar qual função em determinada comissão é exercida",
+        related_name="function_type_committee",
+        through='FunctionTypeCommitteeUserProfile',
+    )
 
     class Meta:
         verbose_name = 'Perfil de Usuário'
@@ -154,3 +162,16 @@ class JIFUserProfile(models.Model):
             if self.user.dept:
                 self.dept = self.user.dept
         super(JIFUserProfile, self).save(*args, **kwargs)
+
+
+class FunctionTypeCommitteeUserProfile(models.Model):
+    user_profile = models.ForeignKey(JIFUserProfile, on_delete=models.CASCADE, verbose_name="Perfil de Usuário")
+    committee = models.ForeignKey(Committee, on_delete=models.CASCADE, verbose_name="Comissão")
+    function_type_committee = models.ForeignKey(FunctionTypeCommittee, on_delete=models.CASCADE, verbose_name="Função da Comissão")
+
+    class Meta:
+        verbose_name = 'Função de Comissão'
+        verbose_name_plural = 'Funções de Comissões'
+
+    def __str__(self):
+        return f'({self.committee.title} | {self.function_type_committee.title} | {self.user_profile.user.siape}) {self.user_profile.user.get_full_name()} | {self.profile.name}{" - " + self.dept.title if self.dept else ""}'

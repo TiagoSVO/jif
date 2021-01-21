@@ -12,7 +12,8 @@ class JIF(models.Model):
     date_init = models.DateTimeField(default=datetime.now, verbose_name="Início")
     date_end = models.DateTimeField(default=datetime.now, verbose_name="Fim")
     image = models.ImageField(upload_to='products', blank=True, null=True)
-    modalities = models.ManyToManyField('Modality', through='JIFModality', related_name='jif')
+    modalities = models.ManyToManyField('Modality', through='JIFModality', related_name='modalities', blank=True)
+    teams = models.ManyToManyField('Team', through='JIFsTeam', related_name='teams', blank=True)
 
     class Meta:
         verbose_name = 'JIF'
@@ -250,3 +251,64 @@ class Game(models.Model):
 
     def __str__(self):
         return f'{self.title} - {self.group.title} - {self.championship.title}'
+
+
+class ScoreType(models.Model):
+    code = models.CharField(max_length=10, verbose_name="Código", blank=True, null=True)
+    title = models.CharField(max_length=100, verbose_name='Título')
+    description = models.TextField(verbose_name="Descrição")
+
+    class Meta:
+        verbose_name = 'Tipo de Score'
+        verbose_name_plural = 'Tipos de Scores'
+
+    def __str__(self):
+        return f'{self.title}'
+
+
+class TeamStatus(models.Model):
+    code = models.CharField(max_length=10, verbose_name="Código", blank=True, null=True)
+    title = models.CharField(max_length=100, verbose_name='Título')
+    description = models.TextField(verbose_name="Descrição")
+
+    class Meta:
+        verbose_name = 'Situação de Time'
+        verbose_name_plural = 'Situações de Times'
+
+    def __str__(self):
+        return f'{self.title}'
+
+
+class Team(models.Model):
+    code = models.CharField(max_length=10, verbose_name="Código", unique=True)
+    flag = models.ImageField(upload_to='flags', blank=True, null=True)
+    title = models.CharField(max_length=100, verbose_name='Título')
+    titular_member_quantity = models.IntegerField(verbose_name="Número de Integrantes Titulares")
+    reserve_members_quantity = models.IntegerField(verbose_name="Número de Integrantes Reservas")
+    description = models.TextField(verbose_name="Descrição")
+    modality = models.ForeignKey(Modality, on_delete=models.CASCADE)
+    dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Campus')
+    sex = models.ForeignKey(Sex, on_delete=models.SET_NULL, blank=True, null=True)
+    team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True)
+    # TODO: Os campos modalidade e sexo
+
+    class Meta:
+        verbose_name = 'Time'
+        verbose_name_plural = 'Times'
+
+    def __str__(self):
+        return f'{self.code} | {self.title}'
+
+
+class JIFsTeam(models.Model):
+    jif = models.ForeignKey(JIF, on_delete=models.CASCADE)
+    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+
+
+class GameTeam(models.Model):
+    pass
+
+
+class ChampionshipsTeam(models.Model):
+    pass
+

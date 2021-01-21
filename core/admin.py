@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .forms import JIFForm
-from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType
-from .models import Championship, Game, Group, ModalityType, Modality, Restriction
+from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType, Team, TeamStatus
+from .models import Championship, Game, Group, ModalityType, Modality, Restriction, ScoreType
 from .models import JIFModality, JIFModalityRestriction, JIFModalityRestrictionValue
 from nested_admin import NestedModelAdmin, NestedStackedInline
 
@@ -93,4 +93,19 @@ class GameAdmin(admin.ModelAdmin):
 
 @admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(TeamStatus)
+class TeamStatusAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(ScoreType)
+class ScoreTypeAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Team)
+class TeamAdmin(admin.ModelAdmin):
     pass

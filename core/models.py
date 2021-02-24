@@ -216,6 +216,7 @@ class Championship(models.Model):
     description = models.TextField(verbose_name="Descrição")
     started_at = models.DateTimeField()
     finished_at = models.DateTimeField()
+    teams = models.ManyToManyField('Team', through='ChampionshipsTeam', related_name='csteams', blank=True)
 
     class Meta:
         verbose_name = 'Campeonato'
@@ -290,7 +291,7 @@ class Team(models.Model):
     dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Campus')
     sex = models.ForeignKey(Sex, on_delete=models.SET_NULL, blank=True, null=True)
     team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True)
-    # TODO: Os campos modalidade e sexo
+    # TODO: Os campos modalidade e sexo tem uma relação
 
     class Meta:
         verbose_name = 'Time'
@@ -304,11 +305,29 @@ class JIFsTeam(models.Model):
     jif = models.ForeignKey(JIF, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = 'Time de JIF'
+        verbose_name_plural = 'Times de JIFs'
+
+    def __str__(self):
+        return f'{self.jif.title} | {self.team.title}'
+
+
+class ChampionshipsTeam(models.Model):
+    championship = models.ForeignKey(Championship, on_delete=models.CASCADE)
+    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = 'Time do Campeonato'
+        verbose_name_plural = 'Times dos Campeonatos'
+
+    def __str__(self):
+        return f'{self.jif.title} | {self.team.title}'
+
 
 class GameTeam(models.Model):
     pass
 
 
-class ChampionshipsTeam(models.Model):
-    pass
+
 

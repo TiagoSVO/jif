@@ -304,6 +304,7 @@ class Team(models.Model):
 class JIFsTeam(models.Model):
     jif = models.ForeignKey(JIF, on_delete=models.CASCADE)
     team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True)
 
     class Meta:
         verbose_name = 'Time de JIF'
@@ -326,7 +327,16 @@ class ChampionshipsTeam(models.Model):
 
 
 class GameTeam(models.Model):
-    pass
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    jif_team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE)
+    score = models.IntegerField()
+    created_at = models.DateTimeField(default=datetime.now, verbose_name="Criado")
+    updated_at = models.DateTimeField(default=datetime.now, verbose_name="Atualizado")
+    score_type = models.ForeignKey(ScoreType, on_delete=models.SET_NULL, blank=True, null=True)
+    updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True) # Evitar circular import error
+
+    class Meta:
+        unique_together = ('game', 'jif_team',)
 
 
 

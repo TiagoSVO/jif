@@ -216,7 +216,7 @@ class Championship(models.Model):
     description = models.TextField(verbose_name="Descrição")
     started_at = models.DateTimeField()
     finished_at = models.DateTimeField()
-    teams = models.ManyToManyField('Team', through='ChampionshipsTeam', related_name='csteams', blank=True)
+    teams = models.ManyToManyField('JIFsTeam', through='ChampionshipsTeam', related_name='csteams', blank=True)
 
     class Meta:
         verbose_name = 'Campeonato'
@@ -316,7 +316,7 @@ class JIFsTeam(models.Model):
 
 class ChampionshipsTeam(models.Model):
     championship = models.ForeignKey(Championship, on_delete=models.CASCADE)
-    team = models.ForeignKey(Team, on_delete=models.CASCADE)
+    team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = 'Time do Campeonato'

@@ -69,6 +69,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     sex = models.ForeignKey(Sex, verbose_name="Sexo", blank=True, null=True, on_delete=models.SET_NULL)
     dept = models.ForeignKey(Dept, verbose_name="Campus", blank=True, null=True, on_delete=models.SET_NULL)
     date_joined = models.DateTimeField(auto_now_add=True, verbose_name='Ingresso em')
+    image = models.ImageField(upload_to='users', blank=True, null=True)
     jif_profiles = models.ManyToManyField(
         JIFProfile,
         verbose_name="Perfis",

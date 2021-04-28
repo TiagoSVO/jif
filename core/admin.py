@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .forms import JIFForm
+from .forms import JIFForm, AthleteForm
 from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType, Team, TeamStatus
 from .models import Championship, Game, Group, ModalityType, Modality, Restriction, ScoreType
 from .models import JIFModality, JIFModalityRestriction, JIFModalityRestrictionValue, Athlete
@@ -114,7 +114,13 @@ class TeamAdmin(admin.ModelAdmin):
 
 @admin.register(Athlete)
 class AthleteAdmin(admin.ModelAdmin):
-    pass
+    form = AthleteForm
+
+    # TODO: Ajustando o salvamento automático do userjisprofile no campo updater_profile
+    # def save_model(self, request, obj, form, change):
+    #     obj.updater_profile = request.user
+    #     print("Passou aqui!")
+    #     super().save_model(request, obj, form, change)
 
 
 @admin.register(Subscription)

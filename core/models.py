@@ -364,17 +364,17 @@ class Athlete(models.Model):
                               )
                           ], blank=True, null=True)
     email = models.EmailField(max_length=255, verbose_name='E-mail', unique=True)
-    birth_date = models.DateTimeField(verbose_name="Criado")
+    birth_date = models.DateField(verbose_name="Data de Aniversário")
     health_care = models.CharField(max_length=30, verbose_name="Plano de Saúde", blank=True, null=True)
     created_at = models.DateTimeField(default=datetime.now, verbose_name="Criado")
     updated_at = models.DateTimeField(default=datetime.now, verbose_name="Atualizado")
     sus_number = models.CharField(max_length=15, verbose_name="N° do SUS", blank=True, null=True)
-    photo = models.ImageField(upload_to='athletes', blank=True, null=True)
+    photo = models.ImageField(upload_to='athletes', blank=True, null=True, verbose_name="Foto")
     medicine = models.TextField(verbose_name="Medicamentos", blank=True, null=True)
     active = models.BooleanField(verbose_name="Atleta ativo?")
     sex = models.ForeignKey(Sex, verbose_name="Sexo", blank=True, null=True, on_delete=models.SET_NULL)
     dept = models.ForeignKey(Dept, verbose_name="Campus", blank=True, null=True, on_delete=models.SET_NULL)
-    blood_type = models.ForeignKey(BloodType, on_delete=models.SET_NULL, blank=True, null=True)
+    blood_type = models.ForeignKey(BloodType, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Tipo Sanguíneo")
     updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True) # Evitar circular import error
 
     class Meta:

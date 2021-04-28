@@ -1,5 +1,5 @@
 from django.forms import ModelForm, ModelMultipleChoiceField
-from .models import JIF, Modality, Team
+from .models import JIF, Athlete, Modality, Team
 
 
 class JIFForm(ModelForm):
@@ -10,3 +10,15 @@ class JIFForm(ModelForm):
         model = JIF
         # fields = ['title', 'year', 'edition', 'date_init', 'date_end']
         fields = '__all__'
+
+
+class AthleteForm(ModelForm):
+    class Meta:
+        model = Athlete
+        exclude = ['updater_profile']
+
+    def save_model(self, request, obj, form, change):
+        obj.updater_profile = request.user
+        print("Passou aqui!")
+        super().save_model(request, obj, form, change)
+

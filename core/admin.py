@@ -117,10 +117,10 @@ class AthleteAdmin(admin.ModelAdmin):
     form = AthleteForm
 
     # TODO: Ajustando o salvamento automático do userjisprofile no campo updater_profile
-    # def save_model(self, request, obj, form, change):
-    #     obj.updater_profile = request.user
-    #     print("Passou aqui!")
-    #     super().save_model(request, obj, form, change)
+    def save_model(self, request, obj, form, change):
+        obj.updater_profile = request.user.jifuserprofile_set.all()[0]
+        #TODO: Verificar se tal perfil pode realizar esta ação
+        super().save_model(request, obj, form, change)
 
 
 @admin.register(Subscription)

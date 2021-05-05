@@ -375,7 +375,7 @@ class Athlete(models.Model):
     sex = models.ForeignKey(Sex, verbose_name="Sexo", blank=True, null=True, on_delete=models.SET_NULL)
     dept = models.ForeignKey(Dept, verbose_name="Campus", blank=True, null=True, on_delete=models.SET_NULL)
     blood_type = models.ForeignKey(BloodType, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Tipo Sanguíneo")
-    updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True) # Evitar circular import error
+    updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True) # 'userjif.JIFUserProfile' -> Evitar circular import error
 
     class Meta:
         verbose_name = 'Atleta'

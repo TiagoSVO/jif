@@ -17,8 +17,3 @@ class AthleteForm(ModelForm):
         model = Athlete
         exclude = ['updater_profile']
 
-    def save_model(self, request, obj, form, change):
-        obj.updater_profile = request.user
-        print("Passou aqui!")
-        super().save_model(request, obj, form, change)
-

@@ -158,7 +158,6 @@ class JIFUserProfile(models.Model):
         return f'({self.user.siape}) {self.user.get_full_name()} | {self.profile.name}{" - " + self.dept.title if self.dept else ""}'
 
     def save(self, *args, **kwargs):
-        print(self)
         if not self.dept:
             if self.user.dept:
                 self.dept = self.user.dept

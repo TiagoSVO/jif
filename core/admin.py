@@ -1,15 +1,10 @@
 from django.contrib import admin
-from .forms import JIFForm, AthleteForm
+from .forms import JIFForm, AthleteForm, ChampionshipForm
 from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType, Team, TeamStatus
 from .models import Championship, Game, Group, ModalityType, Modality, Restriction, ScoreType
 from .models import JIFModality, JIFModalityRestriction, JIFModalityRestrictionValue, Athlete
 from .models import Subscription
 from nested_admin import NestedModelAdmin, NestedStackedInline
-
-
-class JIFModalityInline(admin.StackedInline):
-    model = JIF.modalities.through
-    extra = 0
 
 
 class JIFModalityRestrictionValueInline(NestedStackedInline):
@@ -82,9 +77,15 @@ class RestrictionAdmin(admin.ModelAdmin):
     pass
 
 
+class ChampionshipTeams(NestedStackedInline):
+    model = Championship.teams.through
+    extra = 0
+
+
 @admin.register(Championship)
 class ChampionshipAdmin(admin.ModelAdmin):
-    pass
+    form = ChampionshipForm
+    filter_vertical = ('teams',)
 
 
 @admin.register(Game)

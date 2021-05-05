@@ -1,5 +1,5 @@
 from django.forms import ModelForm, ModelMultipleChoiceField
-from .models import JIF, Athlete, Modality, Team
+from .models import JIF, Athlete, Modality, Team, Championship, JIFsTeam
 
 
 class JIFForm(ModelForm):
@@ -9,6 +9,14 @@ class JIFForm(ModelForm):
     class Meta:
         model = JIF
         # fields = ['title', 'year', 'edition', 'date_init', 'date_end']
+        fields = '__all__'
+
+
+class ChampionshipForm(ModelForm):
+    teams = ModelMultipleChoiceField(queryset=JIFsTeam.objects.all(), required=False)
+
+    class Meta:
+        model = Championship
         fields = '__all__'
 
 

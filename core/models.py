@@ -227,12 +227,12 @@ class JIFModalityRestrictionValue(models.Model):
 
 
 class Championship(models.Model):
-    jif_modality = models.ForeignKey(JIFModality, on_delete=models.CASCADE, verbose_name="JIFModality")
+    jif_modality = models.ForeignKey(JIFModality, on_delete=models.CASCADE, verbose_name="Modalidade")
     title = models.CharField(max_length=100, verbose_name='Título')
     description = models.TextField(verbose_name="Descrição")
-    started_at = models.DateTimeField()
-    finished_at = models.DateTimeField()
-    teams = models.ManyToManyField('JIFsTeam', through='ChampionshipsTeam', related_name='csteams', blank=True)
+    started_at = models.DateTimeField(verbose_name="Início")
+    finished_at = models.DateTimeField(verbose_name="Fim")
+    teams = models.ManyToManyField('JIFsTeam', through='ChampionshipsTeam', related_name='csteams', blank=True, verbose_name="Times")
 
     class Meta:
         verbose_name = 'Campeonato'

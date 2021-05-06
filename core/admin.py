@@ -86,6 +86,9 @@ class ChampionshipTeams(NestedStackedInline):
 class ChampionshipAdmin(admin.ModelAdmin):
     form = ChampionshipForm
     filter_vertical = ('teams',)
+    list_display = ['title', 'jif_modality', 'started_at', 'finished_at']
+    list_display_links = ['title', 'jif_modality']
+    list_editable = ['started_at', 'finished_at']
 
 
 @admin.register(Game)

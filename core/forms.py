@@ -13,7 +13,7 @@ class JIFForm(ModelForm):
 
 
 class ChampionshipForm(ModelForm):
-    teams = ModelMultipleChoiceField(queryset=JIFsTeam.objects.all(), required=False)
+    teams = ModelMultipleChoiceField(queryset=JIFsTeam.objects.all(), required=False, label='Times')
 
     class Meta:
         model = Championship

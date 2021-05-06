@@ -120,11 +120,12 @@ class AthleteAdmin(admin.ModelAdmin):
     list_display_links = ['first_name', 'last_name', 'cpf']
     list_editable = ['birth_date', 'email']
 
-    # TODO: Ajustando o salvamento automático do userjisprofile no campo updater_profile
-    def save_model(self, request, obj, form, change):
-        obj.updater_profile = request.user.jifuserprofile_set.all()[0]
-        #TODO: Verificar se tal perfil pode realizar esta ação
-        super().save_model(request, obj, form, change)
+    # TODO: Ajustando o salvamento automático do userjisprofile no campo updater_profile. No userjif model tem a resp.
+    #
+    # def save_model(self, request, obj, form, change):
+    #     obj.updater_profile = request.user.jifuserprofile_set.all()[0]
+    #     #TODO: Verificar se tal perfil pode realizar esta ação
+    #     super().save_model(request, obj, form, change)
 
 
 @admin.register(Subscription)

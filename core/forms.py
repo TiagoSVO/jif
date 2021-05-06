@@ -23,5 +23,11 @@ class ChampionshipForm(ModelForm):
 class AthleteForm(ModelForm):
     class Meta:
         model = Athlete
-        exclude = ['updater_profile']
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(AthleteForm, self).__init__(*args, **kwargs)
+        updater_profile_field = self.fields['updater_profile']
+        current_user = self.Meta.formfield_callback.keywords['request'].user
+        updater_profile_field.queryset = current_user.jifuserprofile_set.all()
 

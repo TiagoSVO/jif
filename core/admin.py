@@ -90,6 +90,15 @@ class ChampionshipAdmin(admin.ModelAdmin):
     list_display_links = ['title', 'jif_modality']
     list_editable = ['started_at', 'finished_at']
 
+    def get_form(self, request, obj=None, **kwargs):
+        championship_form = super(ChampionshipAdmin, self).get_form(request, obj, **kwargs)
+        field = championship_form.base_fields['jif_modality']
+        field.widget.can_add_related = False
+        field.widget.can_change_related = False
+        field.widget.can_delete_related = False
+
+        return championship_form
+
 
 @admin.register(Game)
 class GameAdmin(admin.ModelAdmin):

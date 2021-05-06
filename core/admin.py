@@ -116,6 +116,9 @@ class TeamAdmin(admin.ModelAdmin):
 @admin.register(Athlete)
 class AthleteAdmin(admin.ModelAdmin):
     form = AthleteForm
+    list_display = ['first_name', 'last_name', 'cpf', 'birth_date', 'email']
+    list_display_links = ['first_name', 'last_name', 'cpf']
+    list_editable = ['birth_date', 'email']
 
     # TODO: Ajustando o salvamento automático do userjisprofile no campo updater_profile
     def save_model(self, request, obj, form, change):

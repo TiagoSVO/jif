@@ -397,7 +397,7 @@ class Subscription(models.Model):
     athlete = models.ForeignKey(Athlete, on_delete=models.CASCADE)
     created_at = models.DateTimeField(default=datetime.now, verbose_name="Criado")
     updated_at = models.DateTimeField(default=datetime.now, verbose_name="Atualizado")
-    updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True)  # Evitar circular import error
+    updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Perfil de Atualização do Usuário")  # Evitar circular import error
 
     class Meta:
         verbose_name = 'Inscrição'
@@ -405,5 +405,9 @@ class Subscription(models.Model):
 
     def __str__(self):
         return f'{self.athlete.first_name} | {self.jif_team.team.title} | {self.jif_team.jif.title} - {self.jif_team.jif.year}'
+
+    def save(self, *args, **kwargs):
+        self.updated_at = datetime.now
+        super(Subscription, self).save(*args, **kwargs)
 
 

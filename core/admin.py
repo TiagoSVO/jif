@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .forms import JIFForm, AthleteForm, ChampionshipForm
+from .forms import JIFForm, AthleteForm, ChampionshipForm, SubscriptionForm
 from .models import JIF, JIFsEvent, Committee, Dept, DeptsPhone, Sex, BloodType, Team, TeamStatus
 from .models import Championship, Game, Group, ModalityType, Modality, Restriction, ScoreType
 from .models import JIFModality, JIFModalityRestriction, JIFModalityRestrictionValue, Athlete
@@ -188,4 +188,20 @@ class AthleteAdmin(admin.ModelAdmin):
 
 @admin.register(Subscription)
 class SubscriptionAdmin(admin.ModelAdmin):
-    pass
+    form = SubscriptionForm
+
+    readonly_fields = [
+        'created_at',
+        'updated_at',
+    ]
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super(SubscriptionAdmin, self).get_form(request, obj, **kwargs)
+        disable_related_crud = ['athlete']
+
+        for field_name in disable_related_crud:
+            field = form.base_fields[field_name]
+            field.widget.can_add_related = False
+            field.widget.can_change_related = False
+            field.widget.can_delete_related = False
+        return form

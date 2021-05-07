@@ -387,6 +387,10 @@ class Athlete(models.Model):
     def complete_name(self):
         return f'{self.first_name} {self.last_name}'
 
+    def save(self, *args, **kwargs):
+        self.updated_at = datetime.now
+        super(Athlete, self).save(*args, **kwargs)
+
 
 class Subscription(models.Model):
     jif_team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE)

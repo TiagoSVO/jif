@@ -243,7 +243,7 @@ class Championship(models.Model):
 
 
 class Group(models.Model):
-    championship = models.ForeignKey(Championship, on_delete=models.CASCADE, verbose_name="JIF")
+    championship = models.ForeignKey(Championship, on_delete=models.CASCADE, verbose_name="Campeonato")
     title = models.CharField(max_length=100, verbose_name='Título')
     description = models.TextField(verbose_name="Descrição")
     unique = models.BooleanField(verbose_name="Grupo único do campeonato?")

@@ -127,7 +127,17 @@ class GameAdmin(admin.ModelAdmin):
 
 @admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
-    pass
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super(GroupAdmin, self).get_form(request, obj, **kwargs)
+        disable_related_crud = ['championship']
+
+        for field_name in disable_related_crud:
+            field = form.base_fields[field_name]
+            field.widget.can_add_related = False
+            field.widget.can_change_related = False
+            field.widget.can_delete_related = False
+        return form
 
 
 @admin.register(TeamStatus)

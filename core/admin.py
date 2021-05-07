@@ -189,6 +189,7 @@ class AthleteAdmin(admin.ModelAdmin):
 @admin.register(Subscription)
 class SubscriptionAdmin(admin.ModelAdmin):
     form = SubscriptionForm
+    list_display = ['jif_team', 'athlete', 'created_at', 'updated_at']
 
     readonly_fields = [
         'created_at',

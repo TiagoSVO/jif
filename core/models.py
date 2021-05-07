@@ -393,8 +393,8 @@ class Athlete(models.Model):
 
 
 class Subscription(models.Model):
-    jif_team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE)
-    athlete = models.ForeignKey(Athlete, on_delete=models.CASCADE)
+    jif_team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE, verbose_name="Time")
+    athlete = models.ForeignKey(Athlete, on_delete=models.CASCADE, verbose_name="Atleta")
     created_at = models.DateTimeField(default=datetime.now, verbose_name="Criado")
     updated_at = models.DateTimeField(default=datetime.now, verbose_name="Atualizado")
     updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Perfil de Atualização do Usuário")  # Evitar circular import error

@@ -259,8 +259,8 @@ class Group(models.Model):
 class Game(models.Model):
     title = models.CharField(max_length=100, verbose_name='Título')
     description = models.TextField(verbose_name="Descrição")
-    championship = models.ForeignKey(Championship, on_delete=models.CASCADE, verbose_name="JIF")
-    group = models.ForeignKey(Group, on_delete=models.CASCADE, verbose_name="JIF")
+    championship = models.ForeignKey(Championship, on_delete=models.CASCADE, verbose_name="Campeonato")
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, verbose_name="Grupo")
 
     class Meta:
         verbose_name = 'Jogo'

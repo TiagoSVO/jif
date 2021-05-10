@@ -176,8 +176,8 @@ class Modality(models.Model):
 
 
 class JIFModality(models.Model):
-    jif = models.ForeignKey(JIF, on_delete=models.CASCADE)
-    modality = models.ForeignKey(Modality, on_delete=models.CASCADE)
+    jif = models.ForeignKey(JIF, on_delete=models.CASCADE, verbose_name="JIF")
+    modality = models.ForeignKey(Modality, on_delete=models.CASCADE, verbose_name="Modalidade")
 
     class Meta:
         verbose_name = 'Modalidade do JIF'

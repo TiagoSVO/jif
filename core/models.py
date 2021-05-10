@@ -202,8 +202,8 @@ class Restriction(models.Model):
 
 
 class JIFModalityRestriction(models.Model):
-    jif_modality = models.ForeignKey(JIFModality, on_delete=models.CASCADE)
-    restriction = models.ForeignKey(Restriction, on_delete=models.CASCADE)
+    jif_modality = models.ForeignKey(JIFModality, on_delete=models.CASCADE, verbose_name="Modalidade do JIF")
+    restriction = models.ForeignKey(Restriction, on_delete=models.CASCADE, verbose_name="Restrição")
 
     class Meta:
         verbose_name = 'Restrição de Modalidade do JIF'

@@ -161,11 +161,11 @@ class ModalityType(models.Model):
 
 
 class Modality(models.Model):
-    modality_type = models.ForeignKey(ModalityType, on_delete=models.SET_NULL, blank=True, null=True)
+    modality_type = models.ForeignKey(ModalityType, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Tipo de Modalidade')
     title = models.CharField(max_length=100, verbose_name='Título')
     acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
     description = models.TextField(verbose_name="Descrição")
-    sex = models.ForeignKey(Sex,  on_delete=models.SET_NULL, blank=True, null=True)
+    sex = models.ForeignKey(Sex,  on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Sexo')
 
     class Meta:
         verbose_name = 'Modalidade'

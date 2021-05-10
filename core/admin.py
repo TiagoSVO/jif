@@ -84,7 +84,17 @@ class ModalityTypeAdmin(admin.ModelAdmin):
 
 @admin.register(Modality)
 class ModalityAdmin(admin.ModelAdmin):
-    pass
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super(ModalityAdmin, self).get_form(request, obj, **kwargs)
+        disable_related_crud = ['modality_type', 'sex']
+
+        for field_name in disable_related_crud:
+            field = form.base_fields[field_name]
+            field.widget.can_add_related = False
+            field.widget.can_change_related = False
+            field.widget.can_delete_related = False
+        return form
 
 
 @admin.register(JIFModality)

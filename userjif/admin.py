@@ -24,6 +24,8 @@ class CustomUserAdmin(BaseUserAdmin, NestedModelAdmin):
     add_form = UserCreationForm
     form = UserChangeForm
 
+    list_display = ['siape', 'email', 'first_name', 'last_name', 'is_staff']
+
     exclude = ['last_login', 'groups']
 
     fieldsets = (

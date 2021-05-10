@@ -285,15 +285,15 @@ class TeamStatus(models.Model):
 
 class Team(models.Model):
     code = models.CharField(max_length=10, verbose_name="Código", unique=True)
-    flag = models.ImageField(upload_to='flags', blank=True, null=True)
+    flag = models.ImageField(upload_to='flags', blank=True, null=True, verbose_name="Bandeira")
     title = models.CharField(max_length=100, verbose_name='Título')
     titular_member_quantity = models.IntegerField(verbose_name="Número de Integrantes Titulares")
     reserve_members_quantity = models.IntegerField(verbose_name="Número de Integrantes Reservas")
     description = models.TextField(verbose_name="Descrição")
-    modality = models.ForeignKey(Modality, on_delete=models.CASCADE)
+    modality = models.ForeignKey(Modality, on_delete=models.CASCADE, verbose_name="Modalidade")
     dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Campus')
-    sex = models.ForeignKey(Sex, on_delete=models.SET_NULL, blank=True, null=True)
-    team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True)
+    sex = models.ForeignKey(Sex, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Sexo")
+    team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Situação do Time")
     # TODO: Os campos modalidade e sexo tem uma relação
 
     class Meta:

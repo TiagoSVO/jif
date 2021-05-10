@@ -3,8 +3,8 @@ from .models import JIF, Athlete, Modality, Team, Championship, JIFsTeam, Subscr
 
 
 class JIFForm(ModelForm):
-    modalities = ModelMultipleChoiceField(queryset=Modality.objects.all(), required=False)
-    teams = ModelMultipleChoiceField(queryset=Team.objects.all(), required=False)
+    modalities = ModelMultipleChoiceField(queryset=Modality.objects.all(), required=False, label='Modalidades')
+    teams = ModelMultipleChoiceField(queryset=Team.objects.all(), required=False, label='Times')
 
     class Meta:
         model = JIF

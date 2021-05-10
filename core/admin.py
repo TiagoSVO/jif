@@ -79,7 +79,17 @@ class BloodTypeAdmin(admin.ModelAdmin):
 
 @admin.register(ModalityType)
 class ModalityTypeAdmin(admin.ModelAdmin):
-    pass
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super(ModalityTypeAdmin, self).get_form(request, obj, **kwargs)
+        disable_related_crud = ['score_type']
+
+        for field_name in disable_related_crud:
+            field = form.base_fields[field_name]
+            field.widget.can_add_related = False
+            field.widget.can_change_related = False
+            field.widget.can_delete_related = False
+        return form
 
 
 @admin.register(Modality)

@@ -139,8 +139,8 @@ class ScoreType(models.Model):
     description = models.TextField(verbose_name="Descrição")
 
     class Meta:
-        verbose_name = 'Tipo de Score'
-        verbose_name_plural = 'Tipos de Scores'
+        verbose_name = 'Tipo de Pontuação'
+        verbose_name_plural = 'Tipos de Pontuações'
 
     def __str__(self):
         return f'{self.title}'
@@ -150,7 +150,7 @@ class ModalityType(models.Model):
     title = models.CharField(max_length=100, verbose_name='Título')
     acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
     description = models.TextField(verbose_name="Descrição")
-    score_type = models.ForeignKey(ScoreType, on_delete=models.SET_NULL, blank=True, null=True)
+    score_type = models.ForeignKey(ScoreType, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Tipo de Pontuação")
 
     class Meta:
         verbose_name = 'Tipo de Modalidade'
@@ -305,9 +305,9 @@ class Team(models.Model):
 
 
 class JIFsTeam(models.Model):
-    jif = models.ForeignKey(JIF, on_delete=models.CASCADE)
-    team = models.ForeignKey(Team, on_delete=models.CASCADE)
-    team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True)
+    jif = models.ForeignKey(JIF, on_delete=models.CASCADE, verbose_name="JIF")
+    team = models.ForeignKey(Team, on_delete=models.CASCADE, verbose_name="Time")
+    team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Situação do Time")
 
     class Meta:
         verbose_name = 'Time de JIF'
@@ -318,8 +318,8 @@ class JIFsTeam(models.Model):
 
 
 class ChampionshipsTeam(models.Model):
-    championship = models.ForeignKey(Championship, on_delete=models.CASCADE)
-    team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE)
+    championship = models.ForeignKey(Championship, on_delete=models.CASCADE, verbose_name="Campeonato")
+    team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE, verbose_name="Time")
 
     class Meta:
         verbose_name = 'Time do Campeonato'
@@ -330,9 +330,9 @@ class ChampionshipsTeam(models.Model):
 
 
 class GameTeam(models.Model):
-    game = models.ForeignKey(Game, on_delete=models.CASCADE)
-    jif_team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE)
-    score = models.IntegerField()
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, verbose_name="Jogo")
+    jif_team = models.ForeignKey(JIFsTeam, on_delete=models.CASCADE, verbose_name="Time do JIF")
+    score = models.IntegerField(verbose_name="Pontuação")
     created_at = models.DateTimeField(default=datetime.now, verbose_name="Criado")
     updated_at = models.DateTimeField(default=datetime.now, verbose_name="Atualizado")
     updater_profile = models.ForeignKey('userjif.JIFUserProfile', on_delete=models.SET_NULL, blank=True, null=True) # Evitar circular import error

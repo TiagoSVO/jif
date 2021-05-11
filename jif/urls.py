@@ -21,6 +21,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('area_restrita/', admin.site.urls),
     url(r'^nested_admin/', include('nested_admin.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = 'Administração do JIF'
+admin.site.index_title = 'Gerenciamento do JIF'
+admin.site.site_title = 'Área Restrita | Administração de JIFs'

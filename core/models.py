@@ -364,6 +364,7 @@ class Athlete(models.Model):
                               )
                           ], blank=True, null=True)
     email = models.EmailField(max_length=255, verbose_name='E-mail', unique=True)
+    registration = models.CharField(max_length=11, verbose_name="Matrícula", unique=True) #TODO: Terminar esta parte e depois ver anotação do Google Drive docs
     birth_date = models.DateField(verbose_name="Data de Aniversário")
     health_care = models.CharField(max_length=30, verbose_name="Plano de Saúde", blank=True, null=True)
     created_at = models.DateTimeField(default=datetime.now, verbose_name="Criado")

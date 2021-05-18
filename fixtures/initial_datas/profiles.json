@@ -1,0 +1,116 @@
+[
+  {
+      "model":"auth.group",
+      "pk":1,
+      "fields":{
+         "name":"Administrador",
+         "permissions":[
+
+         ]
+      }
+   },
+  {
+    "model": "userjif.jifprofile",
+    "pk": 1,
+    "fields": {
+      "code" : "ADM",
+      "description": ""
+    }
+  },
+  {
+      "model":"auth.group",
+      "pk":2,
+      "fields":{
+         "name": "Professor",
+         "permissions":[
+
+         ]
+      }
+  },
+  {
+    "model": "userjif.jifprofile",
+    "pk": 2,
+    "fields": {
+      "code" : "TCH",
+      "description": ""
+    }
+  },
+  {
+      "model":"auth.group",
+      "pk":3,
+      "fields":{
+         "name": "Coordenador JIF",
+         "permissions":[
+
+         ]
+      }
+  },
+  {
+    "model": "userjif.jifprofile",
+    "pk": 3,
+    "fields": {
+      "code" : "MNG",
+      "description": ""
+    }
+  },
+  {
+      "model":"auth.group",
+      "pk":4,
+      "fields":{
+         "name": "Membro",
+         "permissions":[
+
+         ]
+      }
+  },
+  {
+    "model": "userjif.jifprofile",
+    "pk": 4,
+    "fields": {
+      "code" : "MBM",
+      "description": ""
+    }
+  },
+  {
+      "model":"auth.group",
+      "pk":5,
+      "fields":{
+         "name": "Servidor PREX",
+         "permissions":[
+
+         ]
+      }
+  },
+  {
+    "model": "userjif.jifprofile",
+    "pk": 5,
+    "fields": {
+      "code" : "SPX",
+      "description": ""
+    }
+  },
+  {
+      "model":"auth.group",
+      "pk":6,
+      "fields":{
+         "name": "Auxiliar Técnico",
+         "permissions":[
+
+         ]
+      }
+  },
+  {
+    "model": "userjif.jifprofile",
+    "pk": 6,
+    "fields": {
+      "code" : "AXT",
+      "description": ""
+    }
+  }
+]
+
+
+
+
+
+

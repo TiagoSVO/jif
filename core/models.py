@@ -146,6 +146,19 @@ class ScoreType(models.Model):
         return f'{self.title}'
 
 
+class ModalityGrouping(models.Model):
+    title = models.CharField(max_length=100, verbose_name='Título')
+    acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
+    description = models.TextField(verbose_name="Descrição")
+
+    class Meta:
+        verbose_name = 'Agrupamento de Modalidade'
+        verbose_name_plural = 'Agrupamentos de Modalidades'
+
+    def __str__(self):
+        return f'{self.title}'
+
+
 class ModalityType(models.Model):
     title = models.CharField(max_length=100, verbose_name='Título')
     acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
@@ -166,6 +179,7 @@ class Modality(models.Model):
     acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
     description = models.TextField(verbose_name="Descrição")
     sex = models.ForeignKey(Sex,  on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Sexo')
+    grouping = models.ForeignKey(ModalityGrouping, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Agrupamento')
 
     class Meta:
         verbose_name = 'Modalidade'

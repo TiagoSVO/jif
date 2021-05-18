@@ -13,6 +13,7 @@ from core.models import Sex, Dept, Committee, FunctionTypeCommittee
 
 
 class JIFProfile(Group):
+    code = models.CharField(max_length=3, verbose_name="Código")
     description = models.TextField(verbose_name="Descrição do perfil", blank=True, null=True)
 
     class Meta:

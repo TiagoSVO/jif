@@ -9,12 +9,30 @@
     }
   },
   {
+    "model": "core.deptsphone",
+    "pk": 1,
+    "fields": {
+      "dept": 1,
+      "prefix": "61",
+      "number": "21032154"
+    }
+  },
+  {
     "model": "core.dept",
     "pk": 2,
     "fields": {
       "title": "Campus Brasília",
       "acronym" : "CBRA",
       "description": ""
+    }
+  },
+  {
+    "model": "core.deptsphone",
+    "pk": 2,
+    "fields": {
+      "dept": 2,
+      "prefix": "61",
+      "number": "21938084"
     }
   },
   {
@@ -27,12 +45,30 @@
     }
   },
   {
+    "model": "core.deptsphone",
+    "pk": 3,
+    "fields": {
+      "dept": 3,
+      "prefix": "61",
+      "number": "21032250"
+    }
+  },
+  {
     "model": "core.dept",
     "pk": 4,
     "fields": {
       "title": "Campus Planaltina",
       "acronym" : "CPLA",
       "description": ""
+    }
+  },
+  {
+    "model": "core.deptsphone",
+    "pk": 4,
+    "fields": {
+      "dept": 4,
+      "prefix": "61",
+      "number": "21962653"
     }
   },
   {
@@ -45,12 +81,30 @@
     }
   },
   {
+    "model": "core.deptsphone",
+    "pk": 5,
+    "fields": {
+      "dept": 5,
+      "prefix": "61",
+      "number": "21032300"
+    }
+  },
+  {
     "model": "core.dept",
     "pk": 6,
     "fields": {
       "title": "Campus Taguatinga",
       "acronym" : "CTAG",
       "description": ""
+    }
+  },
+  {
+    "model": "core.deptsphone",
+    "pk": 6,
+    "fields": {
+      "dept": 6,
+      "prefix": "61",
+      "number": "21032200"
     }
   },
   {
@@ -63,12 +117,30 @@
     }
   },
   {
+    "model": "core.deptsphone",
+    "pk": 7,
+    "fields": {
+      "dept": 7,
+      "prefix": "61",
+      "number": "21962050"
+    }
+  },
+  {
     "model": "core.dept",
     "pk": 8,
     "fields": {
       "title": "Campus São Sebastião",
       "acronym" : "CSSE",
       "description": ""
+    }
+  },
+  {
+    "model": "core.deptsphone",
+    "pk": 8,
+    "fields": {
+      "dept": 8,
+      "prefix": "61",
+      "number": "21938130"
     }
   },
   {
@@ -81,6 +153,15 @@
     }
   },
   {
+    "model": "core.deptsphone",
+    "pk": 9,
+    "fields": {
+      "dept": 9,
+      "prefix": "61",
+      "number": "21032341"
+    }
+  },
+  {
     "model": "core.dept",
     "pk": 10,
     "fields": {
@@ -90,12 +171,30 @@
     }
   },
   {
+    "model": "core.deptsphone",
+    "pk": 10,
+    "fields": {
+      "dept": 10,
+      "prefix": "61",
+      "number": "21032160"
+    }
+  },
+  {
     "model": "core.dept",
     "pk": 11,
     "fields": {
       "title": "Campus Ceilândia",
       "acronym" : "CCEI",
       "description": ""
+    }
+  },
+  {
+    "model": "core.deptsphone",
+    "pk": 10,
+    "fields": {
+      "dept": 10,
+      "prefix": "61",
+      "number": "21032170"
     }
   }
 ]

@@ -1,0 +1,18 @@
+[
+  {
+    "model": "core.sex",
+    "pk": 1,
+    "fields": {
+      "title": "Masculino",
+      "acronym" : "M"
+    }
+  },
+  {
+    "model": "core.sex",
+    "pk": 1,
+    "fields": {
+      "title": "Feminino",
+      "acronym" : "F"
+    }
+  }
+]

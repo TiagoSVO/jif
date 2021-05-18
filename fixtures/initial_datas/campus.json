@@ -1,0 +1,101 @@
+[
+  {
+    "model": "core.dept",
+    "pk": 1,
+    "fields": {
+      "title": "Instituto Federal de Brasília",
+      "acronym" : "IFB",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 2,
+    "fields": {
+      "title": "Campus Brasília",
+      "acronym" : "CBRA",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 3,
+    "fields": {
+      "title": "Campus Gama",
+      "acronym" : "CGAM",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 4,
+    "fields": {
+      "title": "Campus Planaltina",
+      "acronym" : "CPLA",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 5,
+    "fields": {
+      "title": "Campus Samambaia",
+      "acronym" : "CSAM",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 6,
+    "fields": {
+      "title": "Campus Taguatinga",
+      "acronym" : "CTAG",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 7,
+    "fields": {
+      "title": "Campus Recanto das Emas",
+      "acronym" : "CREM",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 8,
+    "fields": {
+      "title": "Campus São Sebastião",
+      "acronym" : "CSSE",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 9,
+    "fields": {
+      "title": "Campus Riacho Fundo",
+      "acronym" : "CRFU",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 10,
+    "fields": {
+      "title": "Campus Estrutural",
+      "acronym" : "CEST",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.dept",
+    "pk": 11,
+    "fields": {
+      "title": "Campus Ceilândia",
+      "acronym" : "CCEI",
+      "description": ""
+    }
+  }
+]

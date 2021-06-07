@@ -9,7 +9,7 @@
   },
   {
     "model": "core.sex",
-    "pk": 1,
+    "pk": 2,
     "fields": {
       "title": "Feminino",
       "acronym" : "F"

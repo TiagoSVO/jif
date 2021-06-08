@@ -1,0 +1,47 @@
+[
+  {
+    "model": "core.scoretype",
+    "pk": 1,
+    "fields": {
+      "title": "TEMPO",
+      "code" : "TMP",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.scoretype",
+    "pk": 2,
+    "fields": {
+      "title": "CESTA",
+      "code" : "CST",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.scoretype",
+    "pk": 3,
+    "fields": {
+      "title": "GOL",
+      "code" : "GL",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.scoretype",
+    "pk": 4,
+    "fields": {
+      "title": "PONTO",
+      "code" : "PNT",
+      "description": ""
+    }
+  },
+  {
+    "model": "core.scoretype",
+    "pk": 5,
+    "fields": {
+      "title": "VITÓRIA ÚNICA",
+      "code" : "VU",
+      "description": ""
+    }
+  }
+]

@@ -148,7 +148,7 @@ class ScoreType(models.Model):
 
 class ModalityGrouping(models.Model):
     title = models.CharField(max_length=100, verbose_name='Título')
-    acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
+    acronym = models.CharField(max_length=1, verbose_name="Abreviação", blank=True, null=True)
     description = models.TextField(verbose_name="Descrição")
 
     class Meta:
@@ -424,5 +424,3 @@ class Subscription(models.Model):
     def save(self, *args, **kwargs):
         self.updated_at = datetime.now
         super(Subscription, self).save(*args, **kwargs)
-
-

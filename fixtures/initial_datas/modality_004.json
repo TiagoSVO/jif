@@ -1,0 +1,1154 @@
+[
+  {
+    "model": "core.modality",
+    "pk": 1,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 100m Masculino",
+      "acronym" : "atl100m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 2,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 100m Feminino",
+      "acronym" : "atl100f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 3,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 200m Masculino",
+      "acronym" : "atl200m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 4,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 200m Feminino",
+      "acronym" : "atl200f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 5,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 400m Masculino",
+      "acronym" : "atl400m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 6,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 400m Feminino",
+      "acronym" : "atl400f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 7,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 800m Masculino",
+      "acronym" : "atl800m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 8,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 800m Feminino",
+      "acronym" : "atl800f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 9,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 1500m Masculino",
+      "acronym" : "atl1500m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 10,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 1500m Feminino",
+      "acronym" : "atl1500f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 11,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 3000m Feminino",
+      "acronym" : "atl3000f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 12,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 5000m Masculino",
+      "acronym" : "atl5000m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 13,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 4x100m Masculino",
+      "acronym" : "atl4x100m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 14,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 4x100m Feminino",
+      "acronym" : "atl4x100f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 15,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 4x400m Masculino",
+      "acronym" : "atl4x400m",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 16,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo 4x400m Feminino",
+      "acronym" : "atl4x400f",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 17,
+    "fields": {
+      "modality_type": 2,
+      "title": "Basquete Masculino",
+      "acronym" : "bm",
+      "description": "",
+      "sex": 1,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 18,
+    "fields": {
+      "modality_type": 2,
+      "title": "Basquete Feminino",
+      "acronym" : "bf",
+      "description": "",
+      "sex": 2,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 19,
+    "fields": {
+      "modality_type": 4,
+      "title": "Futsal Masculino",
+      "acronym" : "fm",
+      "description": "",
+      "sex": 1,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 20,
+    "fields": {
+      "modality_type": 4,
+      "title": "Futsal Feminino",
+      "acronym" : "ff",
+      "description": "",
+      "sex": 2,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 21,
+    "fields": {
+      "modality_type": 5,
+      "title": "Handebol Masculino",
+      "acronym" : "hm",
+      "description": "",
+      "sex": 1,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 22,
+    "fields": {
+      "modality_type": 5,
+      "title": "Handebol Feminino",
+      "acronym" : "hf",
+      "description": "",
+      "sex": 2,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 23,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Super Ligeiro Masculino",
+      "acronym" : "jslm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 24,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Super Ligeiro Feminino",
+      "acronym" : "jslf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 25,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Ligeiro Masculino",
+      "acronym" : "jlm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 26,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Ligeiro Feminino",
+      "acronym" : "jlf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 27,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Meio-Leve Masculino",
+      "acronym" : "jmlm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 28,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Meio-Leve Feminino",
+      "acronym" : "jmlf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 29,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Leve Masculino",
+      "acronym" : "jlvm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 30,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Leve Feminino",
+      "acronym" : "jlvf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 31,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Meio-Médio Masculino",
+      "acronym" : "jmmm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 32,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Meio-Médio Feminino",
+      "acronym" : "jmmf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 33,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Médio Masculino",
+      "acronym" : "jmm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 34,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Médio Feminino",
+      "acronym" : "jmf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 35,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Meio-Pesado Masculino",
+      "acronym" : "jmpm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 36,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Meio-Pesado Feminino",
+      "acronym" : "jmpf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 37,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Pesado Masculino",
+      "acronym" : "jpm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 38,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Pesado Feminino",
+      "acronym" : "jpf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 39,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Super Pesado Masculino",
+      "acronym" : "jspm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 40,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Super Pesado Feminino",
+      "acronym" : "jspf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 41,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Absoluto Livre Masculino",
+      "acronym" : "jalm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 42,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Absoluto Livre Feminino",
+      "acronym" : "jalf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 43,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Livre Feminino",
+      "acronym" : "n100mlf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 44,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Livre Masculino",
+      "acronym" : "n100mlm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 45,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Costas Feminino",
+      "acronym" : "n50mcf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 46,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Costas Masculino",
+      "acronym" : "n50mcm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 47,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Peito Feminino",
+      "acronym" : "n100mpf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 48,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Peito Masculino",
+      "acronym" : "n100mpm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 49,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Borboleta Feminino",
+      "acronym" : "n50mbf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 50,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Borboleta Masculino",
+      "acronym" : "n50mbm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 51,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Livre Feminino",
+      "acronym" : "n50mlf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 52,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Livre Masculino",
+      "acronym" : "n50mlm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 53,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Costas Feminino",
+      "acronym" : "n100mcf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 54,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Costas Masculino",
+      "acronym" : "n100mcm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 55,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Peito Feminino",
+      "acronym" : "n50mpf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 56,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 50m Peito Masculino",
+      "acronym" : "n50mpm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 57,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Borboleta Feminino",
+      "acronym" : "n100mbf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 58,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 100m Borboleta Masculino",
+      "acronym" : "n100mbm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 59,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x50m Livre Feminino",
+      "acronym" : "n4x50mlf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 60,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x50m Livre Masculino",
+      "acronym" : "n4x50mlm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 61,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x100m Medley Feminino",
+      "acronym" : "n4x100mmf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 62,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x100m Medley Masculino",
+      "acronym" : "n4x100mmm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 63,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x50m Medley Feminino",
+      "acronym" : "n4x50mmf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 64,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x50m Medley Masculino",
+      "acronym" : "n4x50mmf",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 65,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x100m Livre Feminino",
+      "acronym" : "n4x100mlf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 66,
+    "fields": {
+      "modality_type": 7,
+      "title": "Natação 4x100m Livre Masculino",
+      "acronym" : "n4x100mlm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 67,
+    "fields": {
+      "modality_type": 8,
+      "title": "Tênis de Mesa Individual Masculino",
+      "acronym" : "tmim",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 68,
+    "fields": {
+      "modality_type": 8,
+      "title": "Tênis de Mesa Individual Feminino",
+      "acronym" : "tmif",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 69,
+    "fields": {
+      "modality_type": 8,
+      "title": "Tênis de Mesa Dupla Masculino",
+      "acronym" : "tmdm",
+      "description": "",
+      "sex": 1,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 70,
+    "fields": {
+      "modality_type": 8,
+      "title": "Tênis de Mesa Dupla Feminino",
+      "acronym" : "tmdf",
+      "description": "",
+      "sex": 2,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 71,
+    "fields": {
+      "modality_type": 9,
+      "title": "Voleibol Masculino",
+      "acronym" : "vm",
+      "description": "",
+      "sex": 1,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 72,
+    "fields": {
+      "modality_type": 9,
+      "title": "Voleibol Feminino",
+      "acronym" : "vf",
+      "description": "",
+      "sex": 2,
+      "grouping": 2
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 73,
+    "fields": {
+      "modality_type": 11,
+      "title": "Xadrez Masculino",
+      "acronym" : "xm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 74,
+    "fields": {
+      "modality_type": 11,
+      "title": "Xadrez Feminino",
+      "acronym" : "xf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 75,
+    "fields": {
+      "modality_type": 12,
+      "title": "Vôlei de areia/praia Masculino",
+      "acronym" : "vapm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 76,
+    "fields": {
+      "modality_type": 12,
+      "title": "Vôlei de areia/praia Feminino",
+      "acronym" : "vapf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 77,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto em Distância Masculino",
+      "acronym" : "atlsdm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 78,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto em Distância Feminino",
+      "acronym" : "atlsdf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 79,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto em Altura Feminino",
+      "acronym" : "atlsaf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 80,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto em Altura Masculino",
+      "acronym" : "atlsam",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 81,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto Triplo Feminino",
+      "acronym" : "atlstf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 82,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto Triplo Masculino",
+      "acronym" : "atlstm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 83,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto com Vara Feminino",
+      "acronym" : "atlsvf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 84,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Salto com Vara Masculino",
+      "acronym" : "atlsvm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 85,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Arremesso do Peso Masculino",
+      "acronym" : "atlapm",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 86,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Arremesso do Peso Feminino",
+      "acronym" : "atlapf",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 87,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Lançamento do Dardo Masculino",
+      "acronym" : "atldm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 88,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Lançamento do Dardo Feminino",
+      "acronym" : "atldf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 89,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Lançamento do Disco Feminino",
+      "acronym" : "atldiscf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 90,
+    "fields": {
+      "modality_type": 1,
+      "title": "Atletismo Lançamento do Disco Masculino",
+      "acronym" : "atldiscm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 91,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Médio-Leve Masculino",
+      "acronym" : "jmlm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 92,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Médio-Leve Feminino",
+      "acronym" : "jmlf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 93,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Médio-Médio Masculino",
+      "acronym" : "jmmm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 94,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Médio-Médio Feminino",
+      "acronym" : "jmmf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 95,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Extra Pesado Masculino",
+      "acronym" : "jepm",
+      "description": "",
+      "sex": 1,
+      "grouping": 1
+    }
+  },
+  {
+    "model": "core.modality",
+    "pk": 96,
+    "fields": {
+      "modality_type": 6,
+      "title": "Judô Extra Pesado Feminino",
+      "acronym" : "jepf",
+      "description": "",
+      "sex": 2,
+      "grouping": 1
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "model": "core.modalitytype",
+    "pk": 1,
+    "fields": {
+      "title": "Atletismo",
+      "acronym" : "AT",
+      "description": "O Atletismo tem sua origem ainda na Grécia antiga, nas primeiras disputas que originaram as primeiras olímpiadas, a modalidade está presente desde os primeiros jogos da era moderna em Athenas no ano de 1896 e atualmente 24 provas de atletismo fazem parte do programa olímpico. Entre elas provas de velocidade como 100 e 200 metros rasos, corrida com obstáculos, salto com vara, salto em distância e ainda provas combinadas como o decatlo. Em sua história o Brasil já recebeu 17 medalhas no atletismo, sendo 5 delas de ouro e já teve grandes nomes no esporte como João do Pulo, Adhemar Ferreira da Silva, Joaquim Cruz, Robson Caetano, Fabiana Murer e Maurren Maggi. Nos Jogos Universitários Brasileiros, o JUB´s, 32 provas diferentes são disputadas com a entrega num total de 96 medalhas aos vencedores. (Fonte: http://www.proae.ufu.br/diesu/modalidades/atletismo)",
+      "score_type": 1
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 2,
+    "fields": {
+      "title": "Basquete",
+      "acronym" : "BQ",
+      "description": "O Basquetebol ou basquete, é uma modalidade criada em 1891 pelo professor de Educação Física canadense James Naismit, na Associação Cristã de Rapazes de Springfield, Massachusetts, Estados Unidos. É disputado por duas equipes de 5 jogadores em quadras desportivas. O esporte é disputado nos Jogos Olímpicos desde 1936 em Berlim na modalidade masculina , e desde 1976 em Montreal no feminino.  As posições no basquete são  o Armador, o Ala e Ala/Armador; Ala/pivô e Pivô.  O Basquete é uma das modalidaes disputada no JUB's, os Jogos Universitários Brasileiros. (Fonte: http://www.proae.ufu.br/diesu/modalidades/basquete)",
+      "score_type": 2
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 3,
+    "fields": {
+      "title": "Futebol",
+      "acronym" : "FT",
+      "description": "O Futebol de campo é considerado o esporte mais popular do mundo, tem sua origem na Inglaterra do Séx XIX junto com o o Rúgbi e aos poucos se espalhou para todo o mundo. Desde 1930 é organizadada de forma quadrienal a Copa do Mundo de Seleções, torneio que o Brasil é maior campeão com 5 conquistas. O Brasil também conquistou em 2016 sua primeira medalha olímpica na modalidade. O Futebol é considerado o esporte preferido da maioria dos brasileiros e também por isso receb muita audiência e investimentos. O Jogos Brasileiros Universitários conta com o torneio especifico da modalidade que geralmente ocorre no primeiro semestre. \n\nAlem das atléticas especificas de cada curso, a UFU conta com uma equipe de treinameto da mmodalidade e seleciona anualmente novos atletas através de seletivas para os discentes. (Fonte: http://www.proae.ufu.br/diesu/modalidades/futebol-de-campo)",
+      "score_type": 3
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 4,
+    "fields": {
+      "title": "Futsal",
+      "acronym" : "FS",
+      "description": "O Futsal, também conhecido por futebol de salão, é uma variante do futebol disputada por 5 jogadores em quadras de piso. A modalidade foi criada na década de 30 no uruguai e aos poucos foi se popularizando por ser uma alternativa para a disputa do futebol mais fácil de se praticar devido ao menor número de jogadores. Além do goleiro, as posições no futsal são o Fixo, os Alas direito e esquerdo e o Pivô. Apesar de ser um esporte com um grande número de fãs ao redor do mundo, a modalidade ainda não está no programa olímpico, porém ela é disputada no JUB´s, os jogos brasileiros universitários. (Fonte: http://www.proae.ufu.br/diesu/modalidades/futebol-de-salao-futsal)",
+      "score_type": 3
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 5,
+    "fields": {
+      "title": "Handebol",
+      "acronym" : "HD",
+      "description": "O handebol foi criado no início do Séc. XX pelo Alemão Karl Schelenz e incialmente a modalidade era disputada por 11 jogadores em campos com as dimensões semelhantes aos de futebol e rúgbi, ainda nesse formato o esporte estreou nas olimpíadas e Berlim em 1936. Após passar por reformulações que levaram a modalidade para as quadras e diminuíram o número de jogadores para 7, a modalidade voltou para o programa olímpico em 1976, permanecendo até hoje. As posições no handebol são o Armador, os Meias, os Pontas, o Pivô e o Goleiro.   A Modalidade é uma das disputadas no JUB’s, os Jogos Universitários Brasileiros. (Fonte: http://www.proae.ufu.br/diesu/modalidades/handebal)",
+      "score_type": 3
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 6,
+    "fields": {
+      "title": "Judô",
+      "acronym" : "JD",
+      "description": "O Judô é uma arte marcial esportiva que foi criada no Japão, em 1882, pelo professor Jigoro Kano. Ao criar esta arte marcial, Kano tinha como objetivo criar uma técnica de defesa pessoal, além de desenvolver o físico, espírito e mente. O Objetivo da luta é derrubar o adversário fazendo com que ele toque com as costas no chão, ou então imobilizando-o através de estrangulações ou chaves de articulações. As pontuações do Judô são o Yuko, o Waza-ari e o Ippon, que quando alcançado por dos lutadores configura a vitória e o fim da luta. As graduações do Judô são feitas por faixas, em ordem: Branca, Cinza, Azul, Amarela, Laranja, Verde, Roxa, Marrom e Preta. O Judô é disputado nos jogos olímpicos desde a edição de 1964 e o Brasil já conquistou 22 medalhas na modalidade. O Judô também está presente nos Jogos Brasileiros Universitários, o JUB´s, e também pode ser praticado aqui na UFU. (Fonte: http://www.proae.ufu.br/diesu/modalidades/judo)",
+      "score_type": 4
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 7,
+    "fields": {
+      "title": "Natação",
+      "acronym" : "NT",
+      "description": "",
+      "score_type": 1
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 8,
+    "fields": {
+      "title": "Tênis de Mesa",
+      "acronym" : "TM",
+      "description": "",
+      "score_type": 4
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 9,
+    "fields": {
+      "title": "Voleibol",
+      "acronym" : "VB",
+      "description": "",
+      "score_type": 4
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 10,
+    "fields": {
+      "title": "Vôlei",
+      "acronym" : "VL",
+      "description": "O vôlei foi criado em 9 de fevereiro de 1895 por William George Morgan nos Estados Unidos.  O objetivo inicial era criar um esporte de equipes sem contato físico entre os adversários, de modo a minimizar os riscos de lesões. A modalidade faz parte do programa olímpico desde a edição de 1964 em Tóquio e permanece até hoje. Entre os elementos fundamentais do vôlei estão o saque, a recepção, o ataque, o levantamento e o bloqueio. O Vôlei é considerado o segundo esporte mais popular no país, perdendo apenas para o futebol. A modalidade também é disputada no JUB´s, os Jogos Universitário Brasileiros. (Fonte: http://www.proae.ufu.br/diesu/modalidades/volei)",
+      "score_type": 4
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 11,
+    "fields": {
+      "title": "Xadrez",
+      "acronym" : "XD",
+      "description": "",
+      "score_type": null
+    }
+  },
+  {
+    "model": "core.modalitytype",
+    "pk": 12,
+    "fields": {
+      "title": "Vôlei de areia/praia",
+      "acronym" : "VA",
+      "description": "",
+      "score_type": 4
+    }
+  }
+]

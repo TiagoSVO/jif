@@ -1,0 +1,20 @@
+[
+  {
+    "model": "core.modalitygrouping",
+    "pk": 1,
+    "fields": {
+      "title": "Individual",
+      "acronym" : "I",
+      "description": "Modalidade em que apenas há apenas um jogador do time em jogo"
+    }
+  },
+  {
+    "model": "core.modalitygrouping",
+    "pk": 2,
+    "fields": {
+      "title": "Coletivo",
+      "acronym" : "C",
+      "description": "Modalidade em que apenas há mais de um jogador do time em jogo"
+    }
+  }
+]

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .forms import JIFForm, AthleteForm, ChampionshipForm, SubscriptionForm
-from .models import JIF, Dept, DeptsPhone, Sex, BloodType, Team, TeamStatus
+from .models import JIF, Sex, BloodType, Team, TeamStatus
 from .models import Championship, Game, Group, ModalityType, Modality, Restriction, ScoreType
 from .models import JIFModality, JIFModalityRestriction, JIFModalityRestrictionValue, Athlete
 from .models import Subscription
@@ -25,26 +25,6 @@ class JIFModalityRestrictionInline(NestedStackedInline):
 class JIFAdmin(admin.ModelAdmin):
     form = JIFForm
     list_display = ['title', 'year', 'edition', 'date_init', 'date_end']
-
-
-@admin.register(Dept)
-class DeptAdmin(admin.ModelAdmin):
-    pass
-
-
-@admin.register(DeptsPhone)
-class DeptsPhoneAdmin(admin.ModelAdmin):
-
-    def get_form(self, request, obj=None, **kwargs):
-        form = super(DeptsPhoneAdmin, self).get_form(request, obj, **kwargs)
-        disable_related_crud = ['dept']
-
-        for field_name in disable_related_crud:
-            field = form.base_fields[field_name]
-            field.widget.can_add_related = False
-            field.widget.can_change_related = False
-            field.widget.can_delete_related = False
-        return form
 
 
 @admin.register(Sex)

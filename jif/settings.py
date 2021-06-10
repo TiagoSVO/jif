@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'jifs_event',
     'committee',
     'phone',
+    'dept',
 ]
 
 MIDDLEWARE = [

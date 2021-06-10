@@ -9,7 +9,8 @@ from django.core.mail import send_mail
 
 from .managers import UserManager
 
-from core.models import Sex, Dept, Committee, FunctionTypeCommittee
+from core.models import Sex, Dept
+from committee.models import Committee, FunctionTypeCommittee
 
 
 class JIFProfile(Group):

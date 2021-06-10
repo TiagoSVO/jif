@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'core',
     'userjif',
+    'jifs_event',
 ]
 
 MIDDLEWARE = [

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'committee',
     'phone',
     'dept',
+    'sex',
 ]
 
 MIDDLEWARE = [

@@ -9,7 +9,8 @@ from django.core.mail import send_mail
 
 from .managers import UserManager
 
-from core.models import Sex, Dept
+from sex.models import Sex
+from dept.models import Dept
 from committee.models import Committee, FunctionTypeCommittee
 
 

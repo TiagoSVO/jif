@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'phone',
     'dept',
     'sex',
+    'blood_type',
 ]
 
 MIDDLEWARE = [

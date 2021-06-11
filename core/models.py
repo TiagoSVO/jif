@@ -6,6 +6,7 @@ from django.core import validators
 from django.db import models
 from dept.models import Dept
 from sex.models import Sex
+from blood_type.models import BloodType
 
 
 class JIF(models.Model):
@@ -26,17 +27,6 @@ class JIF(models.Model):
 
     def __str__(self):
         return f'{self.title} - {self.year}/{self.edition}'
-
-
-class BloodType(models.Model):
-    title = models.CharField(max_length=3, verbose_name="Tipo Sanquíneo")
-
-    class Meta:
-        verbose_name = 'Tipo Sanguíneo'
-        verbose_name_plural = 'Tipos Sanguíneos'
-
-    def __str__(self):
-        return f'{self.title}'
 
 
 class ScoreType(models.Model):

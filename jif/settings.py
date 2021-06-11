@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'blood_type',
     'restriction',
     'modality',
+    'championship',
+    'team',
 ]
 
 MIDDLEWARE = [

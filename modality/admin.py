@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import ModalityGrouping, ModalityType, Modality, JIFModality, ScoreType
-from core.models import JIFModalityRestriction, JIFModalityRestrictionValue
+from restriction.models import JIFModalityRestriction, JIFModalityRestrictionValue
 
 from nested_admin import NestedModelAdmin, NestedStackedInline
 

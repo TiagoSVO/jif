@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .forms import JIFForm, AthleteForm, ChampionshipForm, SubscriptionForm
 from .models import JIF, Team, TeamStatus
-from .models import Championship, Game, Group, Restriction, Athlete
+from .models import Championship, Game, Group, Athlete
 from .models import Subscription
 from nested_admin import NestedModelAdmin, NestedStackedInline
 
@@ -10,11 +10,6 @@ from nested_admin import NestedModelAdmin, NestedStackedInline
 class JIFAdmin(admin.ModelAdmin):
     form = JIFForm
     list_display = ['title', 'year', 'edition', 'date_init', 'date_end']
-
-
-@admin.register(Restriction)
-class RestrictionAdmin(admin.ModelAdmin):
-    pass
 
 
 class ChampionshipTeams(NestedStackedInline):

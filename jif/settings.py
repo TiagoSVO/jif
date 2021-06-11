@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'modality',
     'championship',
     'team',
+    'athlete'
 ]
 
 MIDDLEWARE = [

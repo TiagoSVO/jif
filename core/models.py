@@ -18,7 +18,7 @@ class JIF(models.Model):
     date_init = models.DateTimeField(default=datetime.now, verbose_name="Início")
     date_end = models.DateTimeField(default=datetime.now, verbose_name="Fim")
     image = models.ImageField(upload_to='products', blank=True, null=True)
-    modalities = models.ManyToManyField('Modality', through='JIFModality', related_name='modalities', blank=True)
+    modalities = models.ManyToManyField('modality.Modality', through='modality.JIFModality', related_name='modalities', blank=True)
     teams = models.ManyToManyField('Team', through='JIFsTeam', related_name='teams', blank=True)
 
     class Meta:
@@ -27,75 +27,6 @@ class JIF(models.Model):
 
     def __str__(self):
         return f'{self.title} - {self.year}/{self.edition}'
-
-
-class ScoreType(models.Model):
-    code = models.CharField(max_length=10, verbose_name="Código")
-    title = models.CharField(max_length=100, verbose_name='Título')
-    description = models.TextField(verbose_name="Descrição")
-
-    class Meta:
-        verbose_name = 'Tipo de Pontuação'
-        verbose_name_plural = 'Tipos de Pontuações'
-
-    def __str__(self):
-        return f'{self.title}'
-
-
-class ModalityGrouping(models.Model):
-    title = models.CharField(max_length=100, verbose_name='Título')
-    acronym = models.CharField(max_length=1, verbose_name="Abreviação", blank=True, null=True)
-    description = models.TextField(verbose_name="Descrição")
-
-    class Meta:
-        verbose_name = 'Agrupamento de Modalidade'
-        verbose_name_plural = 'Agrupamentos de Modalidades'
-
-    def __str__(self):
-        return f'{self.title}'
-
-
-class ModalityType(models.Model):
-    title = models.CharField(max_length=100, verbose_name='Título')
-    acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
-    description = models.TextField(verbose_name="Descrição")
-    score_type = models.ForeignKey(ScoreType, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Tipo de Pontuação")
-
-    class Meta:
-        verbose_name = 'Tipo de Modalidade'
-        verbose_name_plural = 'Tipos de Modalidades'
-
-    def __str__(self):
-        return f'{self.title}'
-
-
-class Modality(models.Model):
-    modality_type = models.ForeignKey(ModalityType, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Tipo de Modalidade')
-    title = models.CharField(max_length=100, verbose_name='Título')
-    acronym = models.CharField(max_length=10, verbose_name="Abreviação", blank=True, null=True)
-    description = models.TextField(verbose_name="Descrição")
-    sex = models.ForeignKey(Sex,  on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Sexo')
-    grouping = models.ForeignKey(ModalityGrouping, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Agrupamento')
-
-    class Meta:
-        verbose_name = 'Modalidade'
-        verbose_name_plural = 'Modalidades'
-
-    def __str__(self):
-        return f'{self.modality_type.title} | {self.title}'
-
-
-class JIFModality(models.Model):
-    jif = models.ForeignKey(JIF, on_delete=models.CASCADE, verbose_name="JIF")
-    modality = models.ForeignKey(Modality, on_delete=models.CASCADE, verbose_name="Modalidade")
-
-    class Meta:
-        verbose_name = 'Modalidade do JIF'
-        verbose_name_plural = 'Modalidades dos JIFS'
-
-    def __str__(self):
-        jif_label = self.jif.acronym or self.jif.title
-        return f'{jif_label} | {self.modality.modality_type.title} - {self.modality.title}'
 
 
 class Restriction(models.Model):
@@ -112,7 +43,7 @@ class Restriction(models.Model):
 
 
 class JIFModalityRestriction(models.Model):
-    jif_modality = models.ForeignKey(JIFModality, on_delete=models.CASCADE, verbose_name="Modalidade do JIF")
+    jif_modality = models.ForeignKey('modality.JIFModality', on_delete=models.CASCADE, verbose_name="Modalidade do JIF")
     restriction = models.ForeignKey(Restriction, on_delete=models.CASCADE, verbose_name="Restrição")
 
     class Meta:
@@ -137,7 +68,7 @@ class JIFModalityRestrictionValue(models.Model):
 
 
 class Championship(models.Model):
-    jif_modality = models.ForeignKey(JIFModality, on_delete=models.CASCADE, verbose_name="Modalidade")
+    jif_modality = models.ForeignKey('modality.JIFModality', on_delete=models.CASCADE, verbose_name="Modalidade")
     title = models.CharField(max_length=100, verbose_name='Título')
     description = models.TextField(verbose_name="Descrição")
     started_at = models.DateTimeField(verbose_name="Início")
@@ -200,7 +131,7 @@ class Team(models.Model):
     titular_member_quantity = models.IntegerField(verbose_name="Número de Integrantes Titulares")
     reserve_members_quantity = models.IntegerField(verbose_name="Número de Integrantes Reservas")
     description = models.TextField(verbose_name="Descrição")
-    modality = models.ForeignKey(Modality, on_delete=models.CASCADE, verbose_name="Modalidade")
+    modality = models.ForeignKey('modality.Modality', on_delete=models.CASCADE, verbose_name="Modalidade")
     dept = models.ForeignKey(Dept, on_delete=models.SET_NULL, blank=True, null=True, verbose_name='Campus')
     sex = models.ForeignKey(Sex, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Sexo")
     team_status = models.ForeignKey(TeamStatus, on_delete=models.SET_NULL, blank=True, null=True, verbose_name="Situação do Time")

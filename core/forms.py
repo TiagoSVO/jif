@@ -1,5 +1,6 @@
 from django.forms import ModelForm, ModelMultipleChoiceField
-from .models import JIF, Athlete, Modality, Team, Championship, JIFsTeam, Subscription
+from .models import JIF, Athlete, Team, Championship, JIFsTeam, Subscription
+from modality.models import Modality
 
 
 class JIFForm(ModelForm):

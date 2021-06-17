@@ -1,6 +1,6 @@
 [
   {
-    "model": "core.sex",
+    "model": "sex.sex",
     "pk": 1,
     "fields": {
       "title": "Masculino",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "core.sex",
+    "model": "sex.sex",
     "pk": 2,
     "fields": {
       "title": "Feminino",

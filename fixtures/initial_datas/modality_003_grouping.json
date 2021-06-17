@@ -1,6 +1,6 @@
 [
   {
-    "model": "core.modalitygrouping",
+    "model": "modality.modalitygrouping",
     "pk": 1,
     "fields": {
       "title": "Individual",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "model": "core.modalitygrouping",
+    "model": "modality.modalitygrouping",
     "pk": 2,
     "fields": {
       "title": "Coletivo",

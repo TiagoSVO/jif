@@ -1,6 +1,6 @@
 [
   {
-    "model": "core.scoretype",
+    "model": "modality.scoretype",
     "pk": 1,
     "fields": {
       "title": "TEMPO",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "model": "core.scoretype",
+    "model": "modality.scoretype",
     "pk": 2,
     "fields": {
       "title": "CESTA",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "model": "core.scoretype",
+    "model": "modality.scoretype",
     "pk": 3,
     "fields": {
       "title": "GOL",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "model": "core.scoretype",
+    "model": "modality.scoretype",
     "pk": 4,
     "fields": {
       "title": "PONTO",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "model": "core.scoretype",
+    "model": "modality.scoretype",
     "pk": 5,
     "fields": {
       "title": "VITÓRIA ÚNICA",

@@ -1,55 +1,55 @@
 [
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 1,
     "fields": {
       "title": "AB+"
     }
   },
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 2,
     "fields": {
       "title": "AB-"
     }
   },
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 3,
     "fields": {
       "title": "A+"
     }
   },
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 4,
     "fields": {
       "title": "A-"
     }
   },
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 5,
     "fields": {
       "title": "B+"
     }
   },
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 6,
     "fields": {
       "title": "B-"
     }
   },
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 7,
     "fields": {
       "title": "O+"
     }
   },
   {
-    "model": "core.bloodtype",
+    "model": "blood_type.bloodtype",
     "pk": 8,
     "fields": {
       "title": "O-"

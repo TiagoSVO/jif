@@ -1,6 +1,6 @@
 [
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 1,
     "fields": {
       "title": "Instituto Federal de Brasília",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 1,
     "fields": {
       "dept": 1,
@@ -18,7 +18,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 2,
     "fields": {
       "title": "Campus Brasília",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 2,
     "fields": {
       "dept": 2,
@@ -36,7 +36,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 3,
     "fields": {
       "title": "Campus Gama",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 3,
     "fields": {
       "dept": 3,
@@ -54,7 +54,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 4,
     "fields": {
       "title": "Campus Planaltina",
@@ -63,7 +63,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 4,
     "fields": {
       "dept": 4,
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 5,
     "fields": {
       "title": "Campus Samambaia",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 5,
     "fields": {
       "dept": 5,
@@ -90,7 +90,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 6,
     "fields": {
       "title": "Campus Taguatinga",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 6,
     "fields": {
       "dept": 6,
@@ -108,7 +108,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 7,
     "fields": {
       "title": "Campus Recanto das Emas",
@@ -117,7 +117,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 7,
     "fields": {
       "dept": 7,
@@ -126,7 +126,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 8,
     "fields": {
       "title": "Campus São Sebastião",
@@ -135,7 +135,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 8,
     "fields": {
       "dept": 8,
@@ -144,7 +144,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 9,
     "fields": {
       "title": "Campus Riacho Fundo",
@@ -153,7 +153,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 9,
     "fields": {
       "dept": 9,
@@ -162,7 +162,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 10,
     "fields": {
       "title": "Campus Estrutural",
@@ -171,7 +171,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 10,
     "fields": {
       "dept": 10,
@@ -180,7 +180,7 @@
     }
   },
   {
-    "model": "core.dept",
+    "model": "dept.dept",
     "pk": 11,
     "fields": {
       "title": "Campus Ceilândia",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "model": "core.deptsphone",
+    "model": "dept.deptsphone",
     "pk": 10,
     "fields": {
       "dept": 10,

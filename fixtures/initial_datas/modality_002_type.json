@@ -1,6 +1,6 @@
 [
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 1,
     "fields": {
       "title": "Atletismo",
@@ -10,7 +10,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 2,
     "fields": {
       "title": "Basquete",
@@ -20,7 +20,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 3,
     "fields": {
       "title": "Futebol",
@@ -30,7 +30,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 4,
     "fields": {
       "title": "Futsal",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 5,
     "fields": {
       "title": "Handebol",
@@ -50,7 +50,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 6,
     "fields": {
       "title": "Judô",
@@ -60,7 +60,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 7,
     "fields": {
       "title": "Natação",
@@ -70,7 +70,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 8,
     "fields": {
       "title": "Tênis de Mesa",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 9,
     "fields": {
       "title": "Voleibol",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 10,
     "fields": {
       "title": "Vôlei",
@@ -100,7 +100,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 11,
     "fields": {
       "title": "Xadrez",
@@ -110,7 +110,7 @@
     }
   },
   {
-    "model": "core.modalitytype",
+    "model": "modality.modalitytype",
     "pk": 12,
     "fields": {
       "title": "Vôlei de areia/praia",
